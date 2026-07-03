@@ -1,0 +1,150 @@
+{
+  "info": {
+    "_postman_id": "8d78a5b7-4ce3-4ba7-af4c-64a792a78618",
+    "name": "Order-Processing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14222722"
+  },
+  "item": [
+    {
+      "name": "OrderProcessing",
+      "item": [
+        {
+          "name": "placeOrder[confirm]",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"orderRequest\":{\r\n        \"orderId\": \"ORD-001\",\r\n        \"customerId\": \"CUST-123\",\r\n        \"customerEmail\": \"test@example.com\",\r\n        \"orderDate\": \"2026-05-30\",\r\n        \"items\": [\r\n            {\r\n            \"productId\": \"PROD-A1\",\r\n            \"productName\": \"Laptop\",\r\n            \"quantity\": \"1\",\r\n            \"unitPrice\": \"500.00\"\r\n            },\r\n            {\r\n            \"productId\": \"PROD-B2\",\r\n            \"productName\": \"Mouse\",\r\n            \"quantity\": \"1\",\r\n            \"unitPrice\": \"500.00\"\r\n            }\r\n        ],\r\n        \"totalAmount\": \"1000.00\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5555/restv2/Order/PlaceOrder",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5555",
+              "path": [
+                "restv2",
+                "Order",
+                "PlaceOrder"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "placeOrder[partial]",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"orderRequest\":{\r\n        \"orderId\": \"ORD-001\",\r\n        \"customerId\": \"CUST-123\",\r\n        \"customerEmail\": \"test@example.com\",\r\n        \"orderDate\": \"2026-05-30\",\r\n        \"items\": [\r\n            {\r\n            \"productId\": \"PROD-A1\",\r\n            \"productName\": \"Laptop\",\r\n            \"quantity\": \"1\",\r\n            \"unitPrice\": \"500.00\"\r\n            },\r\n            {\r\n            \"productId\": \"PROD-B2\",\r\n            \"productName\": \"Mouse\",\r\n            \"quantity\": \"1000\",\r\n            \"unitPrice\": \"500.00\"\r\n            }\r\n        ],\r\n        \"totalAmount\": \"1000.00\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5555/restv2/Order/PlaceOrder",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5555",
+              "path": [
+                "restv2",
+                "Order",
+                "PlaceOrder"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "placeOrder[rejected]",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "Administrator",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"orderRequest\":{\r\n        \"orderId\": \"ORD-001\",\r\n        \"customerId\": \"CUST-123\",\r\n        \"customerEmail\": \"test@example.com\",\r\n        \"orderDate\": \"2026-05-30\",\r\n        \"items\": [\r\n            {\r\n            \"productId\": \"PROD-A1\",\r\n            \"productName\": \"Laptop\",\r\n            \"quantity\": \"100\",\r\n            \"unitPrice\": \"500.00\"\r\n            },\r\n            {\r\n            \"productId\": \"PROD-B2\",\r\n            \"productName\": \"Mouse\",\r\n            \"quantity\": \"1\",\r\n            \"unitPrice\": \"500.00\"\r\n            }\r\n        ],\r\n        \"totalAmount\": \"1000.00\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5555/restv2/Order/PlaceOrder",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5555",
+              "path": [
+                "restv2",
+                "Order",
+                "PlaceOrder"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
