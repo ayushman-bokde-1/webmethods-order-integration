@@ -38,18 +38,15 @@ Client (Postman)
                                    └─────────────────────────────┘
                                                 │
                                                 ▼
-                                    ┌───────────────────┐
-                                    │   Oracle DB 21c   │
-                                    │                   │
-                                    │  PRODUCTS         │
-                                    │  INVENTORY        │
-                                    │  INVENTORY_       │
-                                    │  RESERVATIONS     │
-                                    │  VW_AVAILABLE_    │
-                                    │  INVENTORY        │
-                                    │  UPDATE_INVENTORY_│
-                                    │  RESERVATION (SP) │
-                                    └───────────────────┘
+                         ┌──────────────────────────────────────────────────┐
+                         │   Oracle DB 21c                                  │
+                         │                                                  │
+                         │  PRODUCTS (Table)                                │
+                         │  INVENTORY (Table)                               │
+                         │  INVENTORY_RESERVATIONS (Table)                  │
+                         │  VW_AVAILABLE_INVENTORY (View)                   │
+                         │  UPDATE_INVENTORY_RESERVATION (Stored Procedure) │
+                         └──────────────────────────────────────────────────┘
 ```
 
 ---
