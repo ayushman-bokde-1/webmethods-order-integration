@@ -2,6 +2,8 @@
 
 An enterprise-grade order processing integration system built with **webMethods Integration Server 10.15**. This project demonstrates real-world integration patterns including REST API design, multi-item inventory reservation, Oracle DB connectivity via JDBC adapter, stored procedures, pub/sub messaging, and structured error handling.
 
+📺 **[Watch the demo video](https://youtu.be/PB6eoXGzhuA)**
+
 ---
 
 ## Architecture Overview
